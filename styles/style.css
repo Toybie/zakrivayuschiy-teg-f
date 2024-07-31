@@ -13,6 +13,7 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
+
 .page {
     padding-block-start: 100px;
     min-inline-size: 320px;
@@ -103,4 +104,44 @@
     position: absolute;
     animation: arrow 0.5s ease-in-out infinite alternate;
     inset-inline-start: -20px;
+}
+
+/* main */
+
+.main__grid {
+    display: grid;
+    justify-items: center;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.main__card {
+    margin-inline: auto;
+    border: 2px solid var(--accent-color);
+    background: var(--background-color);
+    max-inline-size: 696px;
+}
+
+.card__title {
+    font-family: var(--page-main-font-family, sans-serif);
+}
+
+.card__img {
+    border-top: 2px solid var(--accent-color);
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    inline-size: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.card__content {
+    display: grid;
+    gap: 27px;
+    border-block-start: 2px solid var(--text-color, #000000);
+    padding: 25px 30px 0 25px;
+    font-size: 18px;
+    line-height: calc(21 / 18);
+    border-top: 2px solid var(--accent-color);
+    font-family: var(--page-main-font-family, sans-serif);
 }
