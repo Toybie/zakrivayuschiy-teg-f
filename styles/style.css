@@ -13,8 +13,94 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+    padding-block-start: 100px;
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    background-image: var(--background-image);
+}
+
+/* header */
+
+.header {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+    line-height: normal;
+    text-transform: uppercase;
+    margin-inline: auto;
+    border: 2px solid var(--accent-color);
+    background: var(--background-color);
+    max-inline-size: 696px;
+}
+
+.header__title {
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+    margin-block-end: 20px;
+}
+
+.header__subtitle {
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.header__theme-menu {
+    margin-block: 25px;
+}
+
+.theme-menu__list {
+    display: grid;
+    gap: 8px;
+    padding-inline-start: 20px;
+}
+
+.theme-menu__button {
+    position: relative;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: transparent;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+}
+
+.theme-menu__button:not(:disabled)::after {
+    content: "";
+    display: block;
+    background: currentColor;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    inline-size: 100%;
+    block-size: 2px;
+}
+
+.theme-menu__button:hover {
+    opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+    outline: none;
+    opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.theme-menu__button:disabled {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+    content: "▶";
+    position: absolute;
+    animation: arrow 0.5s ease-in-out infinite alternate;
+    inset-inline-start: -20px;
 }
