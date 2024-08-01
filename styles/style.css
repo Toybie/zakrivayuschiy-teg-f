@@ -117,12 +117,14 @@
 
 .main__card {
     margin-inline: auto;
+    margin-bottom: 50px;
     border: 2px solid var(--accent-color);
     background: var(--background-color);
     max-inline-size: 696px;
 }
 
 .card__title {
+    padding: 3px 10px 3px;
     font-family: var(--page-main-font-family, sans-serif);
 }
 
@@ -139,9 +141,62 @@
     display: grid;
     gap: 27px;
     border-block-start: 2px solid var(--text-color, #000000);
-    padding: 25px 30px 0 25px;
+    padding: 25px;
     font-size: 18px;
     line-height: calc(21 / 18);
     border-top: 2px solid var(--accent-color);
     font-family: var(--page-main-font-family, sans-serif);
+}
+
+.button__like {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+}
+
+.button {
+    position: relative;
+    border: 2px solid var(--accent-color);
+    padding: 10px 36px;
+    font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+    font-size: 14px;
+    text-transform: inherit;
+    background: var(--background-color);
+    cursor: pointer;
+    appearance: none;
+}
+
+.card__like-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--text-color, #000000);
+    transition: transform 0.5s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+.card__like-button:hover::before {
+    transform: scaleX(1);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:focus-visible {
+    box-shadow: 2px 2px 0px 0px var(--text-color);
+}
+
+.button__text,
+.button__icon {
+    color: var(--background-color);
+    mix-blend-mode: difference;
+}
+
+.card__icon-button {
+    background: var(--background-color);
+    border: none;
 }
