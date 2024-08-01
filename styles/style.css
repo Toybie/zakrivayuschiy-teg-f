@@ -140,11 +140,10 @@
 .card__content {
     display: grid;
     gap: 27px;
-    border-block-start: 2px solid var(--text-color, #000000);
+    border-block-start: 2px solid var(--accent-color);
     padding: 25px;
     font-size: 18px;
     line-height: calc(21 / 18);
-    border-top: 2px solid var(--accent-color);
     font-family: var(--page-main-font-family, sans-serif);
 }
 
@@ -170,7 +169,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--text-color, #000000);
+    background: var(--accent-color);
     transition: transform 0.5s ease-in-out;
     transform: scaleX(0);
     transform-origin: left;
@@ -187,16 +186,26 @@
 }
 
 .button:focus-visible {
-    box-shadow: 2px 2px 0px 0px var(--text-color);
-}
-
-.button__text,
-.button__icon {
-    color: var(--background-color);
-    mix-blend-mode: difference;
+    box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
 .card__icon-button {
     background: var(--background-color);
     border: none;
+}
+
+.button__text,
+.button__icon {
+  color: var(--accent-color);
+  mix-blend-mode: difference;
+}
+
+.button__icon {
+  block-size: 22px;
+  inline-size: 22px;
+}
+
+.like-icon {
+  block-size: 36px;
+  inline-size: 39px;
 }
