@@ -1,34 +1,211 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+
 */
-:root.theme-light {
-    --background-color: var(--color-white);
-    --font-color: var(--color-black);
-    --accent-color: var(--color-black);
-    --button-text-color: var(--color-white);
 
-    --background-image: repeating-linear-gradient(to left, #d3d3d3 0 2px, #d3d3d300 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px), linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+.page {
+    padding-block-start: 100px;
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+    color: var(--font-color);
+    background-color: var(--background-color);
+    background-image: var(--background-image);
 }
 
-:root.theme-dark {
-    --background-color: var(--color-black);
-    --font-color: var(--color-green);
-    --accent-color: var(--color-green);
-    --button-text-color: var(--color-green);
+/* header */
 
-    --background-image: repeating-linear-gradient(to left, #000000 0 2px, #00000000 2px 4px), repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
+.header {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+    line-height: normal;
+    text-transform: uppercase;
+    margin-inline: auto;
+    border: 2px solid var(--accent-color);
+    background: var(--background-color);
+    max-inline-size: 696px;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: var(--color-black);
-        --font-color: var(--color-green);
-        --accent-color: var(--color-green);
-        --button-text-color: var(--color-green);
+.header__title {
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+    margin-block-end: 20px;
+}
 
-        --background-image: repeating-linear-gradient(to left, #000000 0 2px, #00000000 2px 4px), repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
-    }
+.header__subtitle {
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.header__theme-menu {
+    margin-block: 25px;
+}
+
+.theme-menu__list {
+    display: grid;
+    gap: 8px;
+    padding-inline-start: 20px;
+}
+
+.theme-menu__button {
+    position: relative;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: transparent;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    appearance: none;
+}
+
+.theme-menu__button:not(:disabled)::after {
+    content: "";
+    display: block;
+    background: currentColor;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+    inline-size: 100%;
+    block-size: 2px;
+}
+
+.theme-menu__button:hover {
+    opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+    outline: none;
+    opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.theme-menu__button:disabled {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+    content: "▶";
+    position: absolute;
+    animation: arrow 0.5s ease-in-out infinite alternate;
+    inset-inline-start: -20px;
+}
+
+/* main */
+
+.main__grid {
+    display: grid;
+    justify-items: center;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.main__card {
+    margin-inline: auto;
+    margin-bottom: 50px;
+    border: 2px solid var(--accent-color);
+    background: var(--background-color);
+    max-inline-size: 696px;
+}
+
+.card__title {
+    padding: 3px 10px 3px;
+    font-family: var(--page-main-font-family, sans-serif);
+}
+
+.card__img {
+    border-top: 2px solid var(--accent-color);
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    inline-size: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.card__content {
+    display: grid;
+    gap: 27px;
+    border-block-start: 2px solid var(--accent-color);
+    padding: 25px;
+    font-size: 18px;
+    line-height: calc(21 / 18);
+    font-family: var(--page-main-font-family, sans-serif);
+}
+
+.button__like {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+}
+
+.button {
+    position: relative;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px 36px;
+    font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+    font-size: 14px;
+    text-transform: inherit;
+    background: var(--background-color);
+    cursor: pointer;
+    appearance: none;
+}
+
+.card__like-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent-color);
+    transition: transform 0.5s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+.card__like-button:hover::before {
+    transform: scaleX(1);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:focus-visible {
+    box-shadow: 2px 2px 0px 0px var(--accent-color);
+}
+
+.card__icon-button {
+    background: var(--background-color);
+    border: none;
+}
+
+.button__text {
+    color: var(--button-text-color);
+    mix-blend-mode: difference;
+}
+
+.button__icon {
+    block-size: 22px;
+    inline-size: 22px;
+}
+
+.like-icon {
+    block-size: 36px;
+    inline-size: 39px;
 }
