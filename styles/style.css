@@ -209,6 +209,10 @@
     block-size: 100%;
 }
 
+.card__icon-button {
+    max-width: 130px;
+}
+
 .card__like-button:hover::before {
     transform: scaleX(1);
 }
