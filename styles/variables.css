@@ -2,6 +2,7 @@
 :root {
   --page-main-font-family: "Inter", sans-serif;
   --page-main-font-weight: 400;
+  --page-font-title: 700;
   --page-accent-font-family: "PressStart2P", fantasy;
   --heart-contour-color: var(--accent-color);
   
