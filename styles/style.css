@@ -224,7 +224,7 @@
 .card__icon-button {
     background: var(--background-color);
     border: none;
-    max-width: 130px;
+    min-width: 130px;
 }
 
 .button__text {
