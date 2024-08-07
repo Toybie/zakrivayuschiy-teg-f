@@ -117,7 +117,6 @@
 
 .main__card {
     margin-inline: auto;
-    margin-bottom: 50px;
     border: 2px solid var(--accent-color);
     background: var(--background-color);
     max-inline-size: 696px;
@@ -236,7 +235,6 @@
     align-items: flex-start;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 48px;
     margin-bottom: 102px;
   }
 
@@ -300,4 +298,13 @@
     flex-direction: row;
     gap: 20px;
     align-items: center;
+  }
+
+  @media (width <= 375px) {
+    .button__opener {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+      }
   }
