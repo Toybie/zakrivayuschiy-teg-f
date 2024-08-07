@@ -296,3 +296,52 @@ dialog::backdrop {
     gap: 20px;
     align-items: center;
 }
+
+/* FILTERS */
+.filter-dark {
+    filter: contrast(1.2) hue-rotate(-20deg) grayscale(0.7);
+  }
+  
+  .filter-light {
+    filter: saturate(1.5) hue-rotate(-10deg) brightness(1.5);
+  }
+  
+  .filter-coloring {
+    filter: var(--filter-3);
+  }
+  
+  .filter-sepia {
+    filter: hue-rotate(-45deg) sepia(1) contrast(0.5);
+  }
+  
+  .filter-vampire {
+    filter: contrast(1.4) saturate(2) hue-rotate(120deg);
+  }
+  
+  .filter-saturate {
+    filter: saturate(2) contrast(1.2) brightness(1.5);
+  }
+  
+  .filter-low-contrast {
+    filter: brightness(0.9) contrast(0.9) grayscale(0.7) saturate(2) sepia(0.5);
+  }
+  
+  .filter-invert {
+    filter: blur(10px) contrast(1.7) invert(1);
+    clip-path: inset(0);
+  }
+  
+  @media (width <= 375px) {
+    .container {
+      width: 100%;
+    }
+  
+    .button_save {
+      flex-direction: column;
+    }
+  
+    .button__inner-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
