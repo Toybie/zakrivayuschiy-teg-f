@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="dark light" />
         <title>Закрывающий тег</title>
+        <!-- Необходимо также добавить фавикон apple-touch-icon в формате png -->
         <link rel="icon" href="./images/favicon.ico" sizes="any" />
         <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -17,7 +18,9 @@
     </head>
     <body class="page">
         <header class="header">
-            <span class="header__title">&lt;/HTML&gt;</span>
+          <!--Логотип должен быть обернут ссылкой.
+Также не забудьте, что классы должны подходить по смыслу - тут логотип, не заголовок -->
+            <a class="header__logo" href="#">&lt;/HTML&gt;</a>
             <h1 class="header__subtitle">закрывающий тег</h1>
             <nav class="theme-menu header__theme-menu">
                 <ul class="theme-menu__list">
@@ -96,13 +99,19 @@
             </div>
             </div>
        </div>
-
+<!--   Тег див не несет никакой смысловой нагрузки.
+ Здесь необходимо использовать тег section. 
+Подробнее о нем можно почитать тут: http://htmlbook.ru/html/section
+Надо исправить и далее в проекте -->
        <div class="main__card">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;/HTML&gt;</span>
-            <img
+            <!--Пути не должны быть абсолютными. Если владелец сайта переместит картинки, запретит их использование, заблокирует сам сайт и т.д., то ни одной картинки на вашей странице не окажется. Изображения надо скачать в папку images в корневую директорию и подключить при помощи относительных путей.
+Надо исправить и далее в проекте-->
+          <img
                 class="card__img filter-low-contrast"
+                
                 src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3J5ZnFsbGcxbWYzemcwZndvZzhxbHppZzNtMDh6ZGExbTMxMHpqbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bEVKYB487Lqxy/giphy.webp"
                 alt="GIF: Ужас"
             />
@@ -147,6 +156,10 @@
                   />
                 </svg>  
               </button>
+              <!-- Каждой кнопке на странице необходимо задать type. По умолчанию - это submit, однако submit нужен для отправки формы и
+ поведение такой кнопки может быть не таким, какое ожидает пользователь. Подробнее об атрибутах для кнопок
+http://htmlbook.ru/html/button
+Надо исправить для всех кнопок -->
               <button class="button card__like-button">
                    <span class="button__text">Like</span>
               </button>
@@ -490,13 +503,16 @@
         </div>
        </div>
         </main>
-
+<!-- Здесь нет подвала как такового, так как эта часть может изменяться от страницы к странице. 
+Подвалом размечают неизменяемые разделы сайта. Как правило, в подвале находятся колонтитулы с навигацией из ссылок, копирайтом и т.д.
+Кнопку сохранения, а также модальное окно с дискетой можно разместить в main, либо за main, а footer удалить.-->
         <footer class="section__save container">
         <button 
           onclick="window.dialog.showModal()"
           aria-controls="dialog" 
           class="button button__opener"
         >
+        <!-- svg-код для дискеты должен находиться в файле svg.css папки svg -->
         <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill="var(--accent-color)" d="M.5.5h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm33-36v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm30 3v3h-3v-3zm-27 3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm21-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm-6-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm6 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 9v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm0 3v3h-3v-3zm24 0v3h-3v-3zm3 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm33 3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3z"/>
           </svg>

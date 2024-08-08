@@ -55,6 +55,9 @@
     opacity: 1;
   }
   
+  /* Необходимо прописать transition по заданию (значение, время, линейность). 
+Обратите внимание, что если не указать линейность, то применится значение по умолчанию - easy, что не соответствует макету и ТЗ.
+Необходимо корректно реализовать анимацию для всех элементов и далее в проекте */
   .like-icon:active .core {
     opacity: 1;
     fill: var(--color-red);
@@ -67,7 +70,7 @@
   
   .like-icon.is-liked .heart {
     transform-origin: center;
-    animation: 0.3s ease-in 0.1s 2 alternate scaleHeart;
+    animation: 0.3s ease-in 0.1s 1 alternate scaleHeart;
   }
   
   .like-icon.is-liked .contour {
@@ -85,7 +88,7 @@
   }
   
   .like-icon.is-liked .sparks {
-    animation: 0.3s ease-in 0.3s 2 alternate toggleSparks;
+    animation: 0.3s ease-in 0.1s 1 alternate toggleSparks;
   }
   
   .contour {

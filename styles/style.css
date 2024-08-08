@@ -21,6 +21,7 @@
     color: var(--font-color);
     background-color: var(--background-color);
     background-image: var(--background-image);
+    background-attachment: fixed;
     font-variation-settings: "wght" var(--page-main-font-family);
 }
 
@@ -39,7 +40,7 @@
     max-inline-size: 696px;
 }
 
-.header__title {
+.header__logo {
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
     margin-block-end: 20px;
@@ -124,6 +125,12 @@
     max-inline-size: 696px;
 }
 
+/* 1
+У нас есть переменная для жирности, надо использовать ее
+2
+Необходимо настроить жирность вариативного шрифта для заголовков и текста карточек при помощи свойства  font-variation-settings.
+Подробнее https://doka.guide/css/font-variation-settings/
+В темной теме жирность заголовка должна быть 785, в светлой 700 https://disk.yandex.ru/i/Fzvk8FxOXlybfg*/
 .card__title {
     font-weight: 700;
     font-size: 18px;
@@ -141,6 +148,8 @@
     aspect-ratio: 1 / 1;
 }
 
+/* Для всех текстовых элементов необходимо добавить альтернативный шрифт
+Надо исправить для всех похожих случаев */
 .card__watermark {
     position: absolute;
     z-index: 1;
@@ -168,6 +177,8 @@
     }
   }
   
+  /* Для текста карточек также надо настроить шрифты https://disk.yandex.ru/i/aPk5IVQ9Tq_dRQ
+В темной теме жирность должна быть 465, в светлой 400 */
 .card__content {
     display: grid;
     gap: 27px;
