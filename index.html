@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="dark light" />
         <title>Закрывающий тег</title>
-        <!-- Необходимо также добавить фавикон apple-touch-icon в формате png -->
+        <!-- Необходимо также добавить фавикон apple-touch-icon в формате png. ГОТОВО -->
+        <link rel="apple-touch-icon" href="./images/favicon.png" sizes="any" />
         <link rel="icon" href="./images/favicon.ico" sizes="any" />
         <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
         <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -43,7 +44,7 @@
             </nav>
         </header>
         <main class="main__grid">
-        <div class="main__card">
+        <section class="main__card">
             <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
             <div class="card__img"> 
               <span class="card__watermark">&lt;/HTML&gt;</span>
@@ -98,12 +99,12 @@
             </button>
             </div>
             </div>
-       </div>
+          </section>
 <!--   Тег див не несет никакой смысловой нагрузки.
  Здесь необходимо использовать тег section. 
 Подробнее о нем можно почитать тут: http://htmlbook.ru/html/section
 Надо исправить и далее в проекте -->
-       <div class="main__card">
+       <section class="main__card">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;/HTML&gt;</span>
@@ -165,9 +166,9 @@ http://htmlbook.ru/html/button
               </button>
               </div>
         </div>
-       </div>
+       </section>
 
-       <div class="main__card">
+       <section class="main__card">
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;/CSS&gt;</span>
@@ -221,9 +222,9 @@ http://htmlbook.ru/html/button
               </button>
               </div>
         </div>
-       </div>
+       </section>
 
-       <div class="main__card">
+       <section class="main__card">
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;desigions&gt;</span>
@@ -277,9 +278,9 @@ http://htmlbook.ru/html/button
               </button>
               </div>
         </div>
-       </div>
+       </section>
 
-       <div class="main__card">
+       <section class="main__card">
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;care&gt;</span>
@@ -333,9 +334,9 @@ http://htmlbook.ru/html/button
               </button>
               </div>
         </div>
-       </div>
+       </section>
 
-       <div class="main__card">
+       <section class="main__card">
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;support&gt;</span>
@@ -389,9 +390,9 @@ http://htmlbook.ru/html/button
               </button>
               </div>
         </div>
-       </div>
+       </section>
 
-       <div class="main__card">
+       <section class="main__card">
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;lifes-style: none;&gt;</span>
@@ -445,9 +446,9 @@ http://htmlbook.ru/html/button
               </button>
               </div>
         </div>
-       </div>
+       </section>
 
-       <div class="main__card">
+       <section class="main__card">
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;experience&gt;</span>
@@ -501,29 +502,25 @@ http://htmlbook.ru/html/button
               </button>
               </div>
         </div>
-       </div>
-        </main>
+       </section>
+        
 <!-- Здесь нет подвала как такового, так как эта часть может изменяться от страницы к странице. 
 Подвалом размечают неизменяемые разделы сайта. Как правило, в подвале находятся колонтитулы с навигацией из ссылок, копирайтом и т.д.
-Кнопку сохранения, а также модальное окно с дискетой можно разместить в main, либо за main, а footer удалить.-->
-        <footer class="section__save container">
+Кнопку сохранения, а также модальное окно с дискетой можно разместить в main, либо за main, а footer удалить. ГОТОВО-->
+        <section class="button__save">
         <button 
           onclick="window.dialog.showModal()"
           aria-controls="dialog" 
           class="button button__opener"
         >
-        <!-- svg-код для дискеты должен находиться в файле svg.css папки svg -->
-        <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="var(--accent-color)" d="M.5.5h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm33-36v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm30 3v3h-3v-3zm-27 3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm21-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm-6-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm6 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 9v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm0 3v3h-3v-3zm24 0v3h-3v-3zm3 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm33 3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3z"/>
-          </svg>
+        <!-- svg-код для дискеты должен находиться в файле svg.css папки svg. ДОБАВИТЬ ИЗМЕНЕНИЕ ЦВЕТА В SVG -->
+        <img src="./svg/floppy.svg" alt="изображение дискеты">
           <span class="button__text"> Сохранить на память </span>
         </button>
 
         <dialog id="dialog" class="dialog">
           <div class="dialog__section">
-            <svg width="80" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill="var(--accent-color)" d="M.5.5h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm33-36v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm30 3v3h-3v-3zm-27 3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm21-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm-6-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm6 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 9v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm0 3v3h-3v-3zm24 0v3h-3v-3zm3 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm33 3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3z"/>
-              </svg>
+            <img src="./svg/floppy.svg" alt="изображение дискеты">
             <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
           </div>
 
@@ -533,7 +530,8 @@ http://htmlbook.ru/html/button
             </button>
           </form>
         </dialog>
-        </footer>
+      </section>
+    </main>
        <script src="./scripts/like.js"></script>
   </body>
 </html>
