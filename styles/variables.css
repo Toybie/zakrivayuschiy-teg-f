@@ -1,7 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+
 /* В этом селекторе необходимо определить все переменные, которые используются в проекте для темы по умолчанию.
 Обратите внимание, что сейчас автотема отображается не по макету https://disk.yandex.ru/i/ZsYhBXrn_MaALw
-https://skr.sh/sR7WljdYluG */
+https://skr.sh/sR7WljdYluG ГОТОВО */
 
 :root {
   --page-main-font-family: "Inter", sans-serif;
@@ -9,10 +11,20 @@ https://skr.sh/sR7WljdYluG */
   --page-font-title: var(--title-weight);
   --page-accent-font-family: "PressStart2P", fantasy;
   --heart-contour-color: var(--accent-color);
-  
-  
+
   --color-black: #000000;
   --color-white: #FFFFFF;
   --color-green: #00CC14;
   --color-red: #FF0000;
+
+  --background-color: var(--color-black);
+  --font-color: var(--color-green);
+  --accent-color: var(--color-green);
+  --button-text-color: var(--color-green);
+  --watermark-color: var(--color-green);
+  --text-stroke: var(--color-black);
+  --font-weight: 465;
+  --title-weight: 785;
+
+  --background-image: repeating-linear-gradient(to left, #000000 0 2px, #00000000 2px 4px), repeating-linear-gradient(to bottom, #000000 0 2px, #00000000 2px 4px), linear-gradient(to bottom, #007f0c, #004306);
 }
