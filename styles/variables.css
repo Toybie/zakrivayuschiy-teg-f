@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --page-main-font-family: "Inter", sans-serif;
-  --page-main-font-weight: 400;
-  --page-font-title: 700;
+  --page-main-font-weight: var(--font-weight);
+  --page-font-title: var(--title-weight);
   --page-accent-font-family: "PressStart2P", fantasy;
   --heart-contour-color: var(--accent-color);
   
