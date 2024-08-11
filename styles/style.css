@@ -218,6 +218,15 @@
   appearance: none;
 }
 
+.card__icon-button {
+  padding: 0;
+}
+
+.card__like-button {
+  min-width: 130px;
+  padding-inline: 0;
+}
+
 .card__like-button::before {
   content: "";
   position: absolute;
@@ -264,8 +273,6 @@ block-size: 36px;
 inline-size: 39px;
 }
 
-/* footer */
-
 .section__save {
   display: flex;
   align-items: flex-start;
@@ -278,7 +285,28 @@ inline-size: 39px;
   display: flex;
   align-items: center;
   gap: 8px;
+}
 
+.button__opener::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.button__opener:hover::before {
+  transform: scaleX(1);
+}
+
+.save-button__floppy {
+  color: var(--accent-color);
+  width: 21px;
+  height: 21px;
 }
 
 /* dialog */
