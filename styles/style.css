@@ -164,17 +164,15 @@
   (-webkit-text-stroke: 1px var(--text-stroke)) 
 
 ) { 
-
-.card__watermark { 
+  
+  .card__watermark { 
 
   -webkit-text-stroke: 1px var(--text-stroke); 
 
   text-stroke: 1px var(--text-stroke); 
 
   text-shadow: none; 
-
-} 
-
+  } 
 } 
 
 .card__content {
@@ -271,6 +269,7 @@ inline-size: 39px;
 .button__save-svg {
   color:var(--button-text-color);
   mix-blend-mode: difference;
+  transition: none;
 }
 
 .button__opener {
@@ -295,13 +294,6 @@ inline-size: 39px;
 .button__opener:hover::before {
   transform: scaleX(1);
 }
-
-.button__save-svg {
-  transition: none;
-  mix-blend-mode: difference;
-}
-
-
 
 /* dialog */
 
