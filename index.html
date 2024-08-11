@@ -499,15 +499,27 @@
           aria-controls="dialog" 
           class="button button__opener"
         >
-        <svg class="save-button__floppy" viewbox="0 0 21 21">
-          <use href="./images/floppy.svg#floppy" />
-        </svg>
+        <svg class="button__save-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+          >
+            <use xlink:href="./svg/floppy.svg#floppy"></use>
+          </svg>
           <span class="button__text"> Сохранить на память </span>
         </button>
 
         <dialog id="dialog" class="dialog">
           <div class="dialog__section">
-            <!-- сюда SVG дискеты!!! -->
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            height="39"
+            viewBox="0 0 39 39"
+          >
+            <use xlink:href="./svg/floppy.svg#floppy"></use>
+          </svg>
             <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
           </div>
 
