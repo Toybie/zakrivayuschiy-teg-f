@@ -248,8 +248,6 @@
 .button__text {
   color:var(--button-text-color);
   mix-blend-mode: difference;
-  
-   
 }
 
 .button__icon {
@@ -268,6 +266,11 @@ inline-size: 39px;
   margin: 0 auto;
   justify-content: center;
   margin-bottom: 102px;
+}
+
+.button__save-svg {
+  color:var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .button__opener {
