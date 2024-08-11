@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="dark light" />
         <title>Закрывающий тег</title>
-        <!-- Необходимо также добавить фавикон apple-touch-icon в формате png. ГОТОВО -->
         <link rel="apple-touch-icon" href="./images/favicon.png" sizes="any" />
         <link rel="icon" href="./images/favicon.ico" sizes="any" />
         <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
@@ -98,16 +97,12 @@
             </div>
             </div>
           </section>
-<!--   Тег див не несет никакой смысловой нагрузки.
- Здесь необходимо использовать тег section. 
 Подробнее о нем можно почитать тут: http://htmlbook.ru/html/section
 Надо исправить и далее в проекте ГОТОВО -->
        <section class="main__card">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__img"> 
           <span class="card__watermark">&lt;/HTML&gt;</span>
-            <!--Пути не должны быть абсолютными. Если владелец сайта переместит картинки, запретит их использование, заблокирует сам сайт и т.д., то ни одной картинки на вашей странице не окажется. Изображения надо скачать в папку images в корневую директорию и подключить при помощи относительных путей.
-Надо исправить и далее в проекте ГОТОВО-->
           <img
                 class="card__img filter-low-contrast"
                 
@@ -155,10 +150,6 @@
                   />
                 </svg>  
               </button>
-              <!-- Каждой кнопке на странице необходимо задать type. По умолчанию - это submit, однако submit нужен для отправки формы и
- поведение такой кнопки может быть не таким, какое ожидает пользователь. Подробнее об атрибутах для кнопок
-http://htmlbook.ru/html/button
-Надо исправить для всех кнопок ГОТОВО -->
               <button type="button" class="button card__like-button">
                    <span class="button__text">Like</span>
               </button>
@@ -502,9 +493,6 @@ http://htmlbook.ru/html/button
         </div>
        </section>
         
-<!-- Здесь нет подвала как такового, так как эта часть может изменяться от страницы к странице. 
-Подвалом размечают неизменяемые разделы сайта. Как правило, в подвале находятся колонтитулы с навигацией из ссылок, копирайтом и т.д.
-Кнопку сохранения, а также модальное окно с дискетой можно разместить в main, либо за main, а footer удалить. ГОТОВО-->
         <section class="button__save">
         <button 
           onclick="window.dialog.showModal()"
